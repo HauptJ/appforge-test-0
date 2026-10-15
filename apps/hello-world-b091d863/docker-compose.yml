@@ -1,0 +1,74 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: localhost/hello-world-backend:dev
+    user: "10001:10001"
+    environment:
+      APP_NAME: "Hello World"
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      DOCS_ENABLED: ${DOCS_ENABLED:-false}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8080}
+      SERVE_OVER_TLS: ${SERVE_OVER_TLS:-false}
+      SESSION_COOKIE_NAME: ${SESSION_COOKIE_NAME:-hw_session}
+      SESSION_IDLE_MINUTES: ${SESSION_IDLE_MINUTES:-30}
+      SESSION_ABSOLUTE_MINUTES: ${SESSION_ABSOLUTE_MINUTES:-480}
+      OIDC_ISSUER: ${OIDC_ISSUER:-}
+      OIDC_CLIENT_ID: ${OIDC_CLIENT_ID:-}
+      OIDC_REDIRECT_URL: ${OIDC_REDIRECT_URL:-http://localhost:8080/api/v1/auth/callback}
+      OIDC_SCOPES: ${OIDC_SCOPES:-openid profile email}
+      AUTH_DEV_BYPASS: ${AUTH_DEV_BYPASS:-false}
+      DEV_USER_EMAIL: ${DEV_USER_EMAIL:-dev@example.com}
+      DEV_USER_NAME: ${DEV_USER_NAME:-Dev User}
+      # Vault
+      VAULT_ADDR: ${VAULT_ADDR:-}
+      VAULT_ROLE_ID: ${VAULT_ROLE_ID:-}
+      VAULT_SECRET_ID: ${VAULT_SECRET_ID:-}
+      VAULT_SECRET_ID_FILE: ${VAULT_SECRET_ID_FILE:-}
+      VAULT_KV_MOUNT: ${VAULT_KV_MOUNT:-apps}
+      VAULT_APP_PATH: ${VAULT_APP_PATH:-hello-world-b091d863}
+      # Local-development fallback (used only when VAULT_ADDR is unset)
+      ALLOW_ENV_CREDENTIALS: ${ALLOW_ENV_CREDENTIALS:-false}
+      SESSION_SIGNING_KEY: ${SESSION_SIGNING_KEY:-}
+      OIDC_CLIENT_SECRET: ${OIDC_CLIENT_SECRET:-}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys;sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/healthz',timeout=2).status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    expose:
+      - "8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: localhost/hello-world-frontend:dev
+    user: "101:101"
+    depends_on:
+      - backend
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/healthz >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    ports:
+      - "127.0.0.1:8080:8080"

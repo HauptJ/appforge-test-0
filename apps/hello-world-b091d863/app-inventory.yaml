@@ -1,0 +1,60 @@
+schema: app-inventory/v1
+app:
+  name: hello-world
+  display_name: Hello World
+  description: A minimal web app that greets the signed-in user with "Hello, world!".
+  version: 0.1.0
+  business_owner: TBD
+  technical_owner: TBD
+  lifecycle: prototype
+generated_by:
+  tool: appforge
+  model: TBD
+data:
+  classification: internal
+  personal_data: true
+  categories: [contact_info]           # user's email and display name from the IdP, in-memory session only
+  retention: session-lifetime          # nothing is persisted to disk
+  storage: [in-memory-session-store]
+interfaces:
+  inbound:
+    - "GET  /healthz, /readyz"
+    - "GET  /api/v1/auth/status"
+    - "GET  /api/v1/auth/login"
+    - "GET  /api/v1/auth/callback"
+    - "POST /api/v1/auth/logout"
+    - "GET  /api/v1/hello"
+    - "Web UI at /"
+  outbound:
+    - "Organization OpenID Connect provider (OIDC_ISSUER)"
+    - "HashiCorp Vault (VAULT_ADDR) for credential retrieval"
+authentication: oidc
+credentials:
+  vault_path: apps/hello-world-b091d863/
+  app_role: auth/approle/role/app-hello-world-b091d863
+  entries:
+    - name: oidc-client-secret
+      kind: oauth_client_secret
+      env_var: OIDC_CLIENT_SECRET
+      source: owner
+      used_by: backend (OIDC authorization code exchange)
+    - name: session-signing-key
+      kind: encryption_key
+      env_var: SESSION_SIGNING_KEY
+      source: generated
+      used_by: backend (signs session cookie IDs)
+components:
+  - name: backend
+    language: python
+    framework: fastapi
+    image: localhost/hello-world-backend
+  - name: frontend
+    language: typescript
+    framework: react
+    image: localhost/hello-world-frontend
+dependencies_manifests:
+  - backend/requirements.txt
+  - frontend/package.json
+risks:
+  - "In-memory session store is single-process only; use Redis before scaling horizontally."
+  - "Dev auth bypass (AUTH_DEV_BYPASS=true) must be disabled in any shared environment."

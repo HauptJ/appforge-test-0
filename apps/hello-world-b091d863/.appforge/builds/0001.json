@@ -1,0 +1,332 @@
+{
+  "schema": "appforge.manifest/v1",
+  "generator": {
+    "name": "appforge",
+    "version": "0.1.0"
+  },
+  "application": {
+    "id": "b091d863-3b67-49c2-99fc-8b097b510f7b",
+    "title": "Hello World",
+    "repo_path": "apps/hello-world-b091d863",
+    "latest_commit": null,
+    "build_count": 1
+  },
+  "job": {
+    "id": "b091d863-3b67-49c2-99fc-8b097b510f7b",
+    "title": "Hello World",
+    "owner": "a7076e60925e4285ba1bd964150bd77a",
+    "owner_email": "josh@hauptj.com",
+    "owner_name": "Joshua Haupt",
+    "status": "running",
+    "created_at": "2026-10-15T23:48:13.170334+00:00",
+    "updated_at": "2026-10-15T23:48:13.205796+00:00",
+    "error": null
+  },
+  "model": {
+    "name": "claude-opus-4-7",
+    "effort": "high",
+    "thinking": "adaptive",
+    "max_tokens": 32000
+  },
+  "skills": [
+    {
+      "name": "secure-app-baseline",
+      "sha256": "bcf9c70fcacb286cb57c53fdcd199b033be6a7d57905062087c7ce0af797608d"
+    },
+    {
+      "name": "react-python-webapp",
+      "sha256": "7559535f0d7aea608e3df9d646501dfd5fd6d4abe8a9c839d930d85775ca791e"
+    },
+    {
+      "name": "containerized-delivery",
+      "sha256": "8e09d9493e19293b2347136996976663a61f1b24a129c93b145f78eb1bbf4307"
+    },
+    {
+      "name": "app-inventory",
+      "sha256": "a75d77281b4c4eba745d1cf666a723ed8868a66c8defded1e0ecc6110e189b76"
+    },
+    {
+      "name": "vault-credentials",
+      "sha256": "6c418834011bf5661f1d7a6f611af512d147cb9d12e4b89761f14e0be252cde4"
+    }
+  ],
+  "mcp_servers": {
+    "configured": [],
+    "connected": [],
+    "errors": {}
+  },
+  "attachments": [],
+  "outputs": [
+    {
+      "path": ".env.example",
+      "size": 1413,
+      "sha256": "18acffc17afdf3c8833bac7071c9d642cb49a9f760260e638a0722eb8673b16e"
+    },
+    {
+      "path": ".gitignore",
+      "size": 233,
+      "sha256": "59f29e4c4645001cfde50a21f3b6eea65e26df3091e367549a042a6ff6052f3b"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 984,
+      "sha256": "9fcffe748a069aa3881f04aa0632996a270f46eb16d9d8cecfdd2af7bd151a48"
+    },
+    {
+      "path": "Makefile",
+      "size": 652,
+      "sha256": "6f559e03a187301ba55ee6868eb982501b0aff9e5bc776ffc97de24ac371be24"
+    },
+    {
+      "path": "README.md",
+      "size": 9204,
+      "sha256": "a7509e2afcccc87477dca722a878dd0417e585f100abefda9bf8e09db8cdbe4d"
+    },
+    {
+      "path": "app-inventory.yaml",
+      "size": 1904,
+      "sha256": "13d221d1d70b7bfe5a34515a711a64e8fd90ae6e634ae7c18dddd81f0c213f29"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "size": 89,
+      "sha256": "2066b47c9c29c0a1be20536256b79d563ff5805ae486d6a7f4bb7b546effb3de"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "size": 998,
+      "sha256": "e4f770d919f713098af3fd75dd9f21030a68a87de9b6a8a26656b2e8be41b6cf"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/auth.py",
+      "size": 6762,
+      "sha256": "b1553aba8fca513f27388b8462be7436fdfc2d6f486aefbfa7be20b8386cc9c9"
+    },
+    {
+      "path": "backend/app/api/deps.py",
+      "size": 691,
+      "sha256": "0f4a6cbb96eac6e5a53c0cb43a011feaf43a0b78ff12852ef8fe241bf2467762"
+    },
+    {
+      "path": "backend/app/api/hello.py",
+      "size": 634,
+      "sha256": "9699346da4527c603dd108aa5ef265b91648ca9c188308afbeea00b2d84229f8"
+    },
+    {
+      "path": "backend/app/asgi.py",
+      "size": 110,
+      "sha256": "a1ed62e981c884c57988b7c3effd285f8e3a0267c6341c6ec520251dfc9e3ed8"
+    },
+    {
+      "path": "backend/app/config.py",
+      "size": 1537,
+      "sha256": "fc9c9ed7958f57108c4498f99fdbfcc967f2e98a9cb2599f2fa7ca458a024250"
+    },
+    {
+      "path": "backend/app/logging_setup.py",
+      "size": 2394,
+      "sha256": "8589a99e7f07403f7ebb915d024290d66bea0650c11ad53cb4c7d98c31e6bd3d"
+    },
+    {
+      "path": "backend/app/main.py",
+      "size": 4190,
+      "sha256": "90b36bb9933a8bfa750f8549b086e9362bae44a804ed9507d4f92f88d3d1abb0"
+    },
+    {
+      "path": "backend/app/models/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/models/schemas.py",
+      "size": 645,
+      "sha256": "8bbec0f41a80b6036897240e160222867e1d38403d762dc781314e9cd7059afb"
+    },
+    {
+      "path": "backend/app/oidc.py",
+      "size": 4263,
+      "sha256": "58c3cb734ff7933732c1f321dae3133c7456c58feecffc030e7e3fef81498f4e"
+    },
+    {
+      "path": "backend/app/repositories/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/security.py",
+      "size": 4957,
+      "sha256": "82000d6eab9795265c2363dcdd10f69fcb477b032547cf13859323b9d0fd7019"
+    },
+    {
+      "path": "backend/app/services/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/services/hello_service.py",
+      "size": 263,
+      "sha256": "5c8e23fefcb4fdb326f13f0e38202d44419a4076a1eada3b4cd01bf85457d89b"
+    },
+    {
+      "path": "backend/app/sessions.py",
+      "size": 3019,
+      "sha256": "7bfa5d861fbc1d492fb1441db3aa47f98ebc5ab7ee3a8926f7df442c1716be79"
+    },
+    {
+      "path": "backend/app/vault_credentials.py",
+      "size": 4670,
+      "sha256": "e4431601a98a3ce5c77914c3a92b2a08e79debc4a4b27dacbe5bfc9422b76879"
+    },
+    {
+      "path": "backend/pytest.ini",
+      "size": 76,
+      "sha256": "082d330ab1d43e475a5be9955ef8e02423ca25a5bf0056a840567ab7f1609c2b"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "size": 169,
+      "sha256": "aed99fb84679f21cadc1b84bc97bd061d3770628aea7f143c9d3f4fb8efea608"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "size": 1223,
+      "sha256": "d8b0491857aed1a09b547d5080e11421a3dfef4b9827243741d2d797ca02d530"
+    },
+    {
+      "path": "backend/tests/test_auth.py",
+      "size": 1338,
+      "sha256": "6210be7600fa61713edbf15a3697779d921b1f7aae1750744d056a3e8a09e171"
+    },
+    {
+      "path": "backend/tests/test_body_limit.py",
+      "size": 260,
+      "sha256": "3f26a40fbe1aef6ade653ae2bad51b5dea407ec6ec80942283fbfa05513e0c87"
+    },
+    {
+      "path": "backend/tests/test_health.py",
+      "size": 606,
+      "sha256": "4650969637c862d6347f5d7e99d4f36585ca1235bc272f99ffb28e226fded2e7"
+    },
+    {
+      "path": "backend/tests/test_hello.py",
+      "size": 1443,
+      "sha256": "a13c961a65e2797f0d00d4d87f8de5b1fc86b3c376f26a1abe3506da67c58eaf"
+    },
+    {
+      "path": "docker-compose.yml",
+      "size": 2542,
+      "sha256": "4c52dd7acf4f71470259342a3de3a140930129be6f3bdc2f7e86b94eefafa11e"
+    },
+    {
+      "path": "frontend/.dockerignore",
+      "size": 55,
+      "sha256": "681d2e3f6fa063ded3065e8c034d82515b430b3c52145d06b7112cdf486b65ec"
+    },
+    {
+      "path": "frontend/Dockerfile",
+      "size": 932,
+      "sha256": "e6dfca73fb1a2ec54b03659368169ea8bd5e946be6cdf90fb8b6ce3de2a34273"
+    },
+    {
+      "path": "frontend/index.html",
+      "size": 352,
+      "sha256": "1e7c4f68cbbdafba965c34aeaed325fdfb3e9747b78f67bcf462c4166bbec5a9"
+    },
+    {
+      "path": "frontend/nginx.conf",
+      "size": 1973,
+      "sha256": "c2acd7e77af779a6923b3ddf7bc2c3f9a47e91074d140d4b7fb8015f3a2307f7"
+    },
+    {
+      "path": "frontend/package.json",
+      "size": 731,
+      "sha256": "bdd4920db6823b5df25dd81eb3fcfce6f63dc1dab5116b01e743225733e25891"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "size": 1436,
+      "sha256": "5c15500861efc008872b3dfa5f51b1ec25d9211934d8d3443bf620779d506c1f"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "size": 2475,
+      "sha256": "a8313799d178d230711f475db96b4e0884ec2559c3d5dc59bb692f06d0af429d"
+    },
+    {
+      "path": "frontend/src/api/client.ts",
+      "size": 1936,
+      "sha256": "a18273e3d133366539b29b80883be28bd996061ce55d0844162cc32f577c0229"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "size": 244,
+      "sha256": "057a5622cc4b784576df90556d94ce264cc3dd1a0419fb98bd1722faa34bf71b"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "size": 962,
+      "sha256": "e745362c0f5b723ca9fa46ccfc02ad360adf5fc222475a9fc34b1fbfd2863f3d"
+    },
+    {
+      "path": "frontend/src/test/msw-server.ts",
+      "size": 868,
+      "sha256": "ffd6f3a1bcf78ddc92b91ee16835aeae6fd1006f63df02098f5817df79bf0b9c"
+    },
+    {
+      "path": "frontend/src/test/setup.ts",
+      "size": 272,
+      "sha256": "c96538106a3acef3006c57e7f88dcc2068b16d0268c983ce02fa76f5bf21fb69"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "size": 571,
+      "sha256": "c9acb7b548c118198f9726a88789cbc98f68e55d33f3dad326342fe2c0872503"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "size": 573,
+      "sha256": "eb7bb0c79842a71deb1bbf84feca105805da9f5bd85577b96be6a21194a1a038"
+    }
+  ],
+  "usage": {
+    "input_tokens": 22,
+    "output_tokens": 47024,
+    "cache_read_input_tokens": 478390,
+    "cache_creation_input_tokens": 53923
+  },
+  "tool_calls": {
+    "read_skill_file": 2,
+    "declare_secret": 2,
+    "write_file": 53,
+    "list_secrets": 1,
+    "list_files": 1
+  },
+  "build": {
+    "id": "1f4b1af7-748c-4313-85d0-85f2ae91e5c4",
+    "number": 1,
+    "kind": "create",
+    "status": "completed",
+    "requested_by": {
+      "id": "a7076e60925e4285ba1bd964150bd77a",
+      "email": "josh@hauptj.com",
+      "name": "Joshua Haupt"
+    },
+    "prompt": "A simple web app that only says hello world",
+    "prompt_sha256": "192de6ba4d4424174b504486cbd2d5ce0417676667b16eaf1bf607d4b1f01daf"
+  }
+}

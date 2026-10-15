@@ -1,0 +1,50 @@
+{
+  "applications": [
+    {
+      "schema": "appforge.app/v1",
+      "app_id": "b091d863-3b67-49c2-99fc-8b097b510f7b",
+      "title": "Hello World",
+      "dir": "hello-world-b091d863",
+      "repo_path": "apps/hello-world-b091d863",
+      "owner": {
+        "id": "a7076e60925e4285ba1bd964150bd77a",
+        "email": "josh@hauptj.com",
+        "name": "Joshua Haupt"
+      },
+      "created_at": "2026-10-15T23:48:13.170334+00:00",
+      "updated_at": "2026-10-15T23:56:40.787677+00:00",
+      "latest_build": {
+        "id": "1f4b1af7-748c-4313-85d0-85f2ae91e5c4",
+        "number": 1,
+        "kind": "create",
+        "status": "completed",
+        "at": "2026-10-15T23:56:40.787696+00:00",
+        "requested_by": {
+          "email": "josh@hauptj.com",
+          "name": "Joshua Haupt"
+        }
+      },
+      "vault_path": "apps/hello-world-b091d863/",
+      "secrets": [
+        {
+          "name": "oidc-client-secret",
+          "kind": "oauth_client_secret",
+          "description": "OIDC client secret used by the backend to authenticate the Hello World app against the organization IdP (Authorization Code + PKCE).",
+          "env_var": "OIDC_CLIENT_SECRET",
+          "declared_at": "2026-10-15T23:48:31.071291+00:00",
+          "source": "owner",
+          "vault_path": "apps/hello-world-b091d863/oidc-client-secret"
+        },
+        {
+          "name": "session-signing-key",
+          "kind": "encryption_key",
+          "description": "Server-side session cookie signing key for the Hello World backend. Rotating it logs everyone out.",
+          "env_var": "SESSION_SIGNING_KEY",
+          "declared_at": "2026-10-15T23:48:31.071696+00:00",
+          "source": "generated",
+          "vault_path": "apps/hello-world-b091d863/session-signing-key"
+        }
+      ]
+    }
+  ]
+}
