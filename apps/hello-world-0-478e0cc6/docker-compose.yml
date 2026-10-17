@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    image: localhost/hello-world-0-backend:dev
+    container_name: hello-world-0-backend
+    environment:
+      DOCS_ENABLED: "${DOCS_ENABLED:-false}"
+      MAX_BODY_BYTES: "${MAX_BODY_BYTES:-1048576}"
+    ports:
+      - "127.0.0.1:8080:8080"
+    user: "10001:10001"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=2).status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s

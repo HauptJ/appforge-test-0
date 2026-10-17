@@ -1,0 +1,179 @@
+{
+  "schema": "appforge.manifest/v1",
+  "generator": {
+    "name": "appforge",
+    "version": "0.1.0"
+  },
+  "application": {
+    "id": "478e0cc6-7ea6-4a5a-9ed6-323682acb336",
+    "title": "Hello World 0",
+    "repo_path": "apps/hello-world-0-478e0cc6",
+    "latest_commit": null,
+    "build_count": 1
+  },
+  "job": {
+    "id": "478e0cc6-7ea6-4a5a-9ed6-323682acb336",
+    "title": "Hello World 0",
+    "owner": "a7076e60925e4285ba1bd964150bd77a",
+    "owner_email": "josh@hauptj.com",
+    "owner_name": "Joshua Haupt",
+    "status": "running",
+    "created_at": "2026-10-17T17:58:42.581586+00:00",
+    "updated_at": "2026-10-17T17:58:42.622350+00:00",
+    "error": null
+  },
+  "model": {
+    "name": "claude-opus-4-7",
+    "effort": "high",
+    "thinking": "adaptive",
+    "max_tokens": 32000
+  },
+  "skills": [
+    {
+      "name": "secure-app-baseline",
+      "sha256": "bcf9c70fcacb286cb57c53fdcd199b033be6a7d57905062087c7ce0af797608d"
+    },
+    {
+      "name": "react-python-webapp",
+      "sha256": "7559535f0d7aea608e3df9d646501dfd5fd6d4abe8a9c839d930d85775ca791e"
+    },
+    {
+      "name": "containerized-delivery",
+      "sha256": "8e09d9493e19293b2347136996976663a61f1b24a129c93b145f78eb1bbf4307"
+    },
+    {
+      "name": "app-inventory",
+      "sha256": "a75d77281b4c4eba745d1cf666a723ed8868a66c8defded1e0ecc6110e189b76"
+    },
+    {
+      "name": "vault-credentials",
+      "sha256": "6c418834011bf5661f1d7a6f611af512d147cb9d12e4b89761f14e0be252cde4"
+    }
+  ],
+  "mcp_servers": {
+    "configured": [],
+    "connected": [],
+    "errors": {}
+  },
+  "attachments": [],
+  "outputs": [
+    {
+      "path": ".dockerignore",
+      "size": 130,
+      "sha256": "9d499481a76be1ff0779baaf44ea8f7cafe7b0fbc1cb92b1897606fc13ca05e8"
+    },
+    {
+      "path": ".env.example",
+      "size": 211,
+      "sha256": "12c5d99c0febaae51dfb1d4fac56fb37a2f5a34b7a915088716dee2efef04f24"
+    },
+    {
+      "path": ".gitignore",
+      "size": 122,
+      "sha256": "32a70e35b99536e345f128c791658a9907e201d309aa61c40014ec602c7c0d8a"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 525,
+      "sha256": "32ad870d23dfb815e707d88e8b3272e88bcd160fef394625337be5a92fb426ff"
+    },
+    {
+      "path": "Makefile",
+      "size": 515,
+      "sha256": "07f9e3665fa1bad6ecbf128911f7ea107ffdadc45e68edbd31eb79ac1f61b35a"
+    },
+    {
+      "path": "README.md",
+      "size": 5118,
+      "sha256": "afa828aca9b47276cfe3d3c4188f0169ba00213ab80fd8734a02a2f2b5aa301c"
+    },
+    {
+      "path": "app-inventory.yaml",
+      "size": 1004,
+      "sha256": "497eea7cf69f24ee05d0bd3dcecc4514e92e836f0f6ec7bcc10d9942686e45d2"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "size": 1127,
+      "sha256": "0ac2c9a039a3931a7220899be60099886645fef41a7c01a55586fba4ca1fddfe"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/app/api/hello.py",
+      "size": 524,
+      "sha256": "69aa7443bcc4ac303d433516144e00d9dcc41deb76a293b587c8d1ec9a452f82"
+    },
+    {
+      "path": "backend/app/config.py",
+      "size": 701,
+      "sha256": "33b931468f0274cef5fd33b5a549d42ce31aee181bfb11fc2cbb5ea176f1c9ad"
+    },
+    {
+      "path": "backend/app/logging_config.py",
+      "size": 3058,
+      "sha256": "d364bf15d36858f257042c5042ca60697cd66bf7dafc0704654f7a787daa9e89"
+    },
+    {
+      "path": "backend/app/main.py",
+      "size": 4929,
+      "sha256": "61bf2c41ce04d44b22c3a7f2eae1b5986c8b1f02dcf6b89d02c4c19deec4ed9b"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "size": 113,
+      "sha256": "c0b081311aec01e90cb78fe91de4512298ba26f4e60164a995c7a70a8583fae8"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "size": 232,
+      "sha256": "144f227729906da79cedcc77c0185afef7da57f66cee14eca824beece088bf92"
+    },
+    {
+      "path": "backend/tests/test_hello.py",
+      "size": 1769,
+      "sha256": "b674f3cba6d60bdab05fc7c9685da5468da2157528ded4496c7f853b50ce32f7"
+    },
+    {
+      "path": "docker-compose.yml",
+      "size": 752,
+      "sha256": "426ed7c7a9c803eaad794019f286c76399c651b2f8f57bad5ddc97504cda7985"
+    }
+  ],
+  "usage": {
+    "input_tokens": 9,
+    "output_tokens": 11354,
+    "cache_read_input_tokens": 38820,
+    "cache_creation_input_tokens": 18909
+  },
+  "tool_calls": {
+    "write_file": 19,
+    "list_secrets": 1
+  },
+  "build": {
+    "id": "b34e888f-6aed-4db5-8c38-92157517f2e8",
+    "number": 1,
+    "kind": "create",
+    "status": "completed",
+    "requested_by": {
+      "id": "a7076e60925e4285ba1bd964150bd77a",
+      "email": "josh@hauptj.com",
+      "name": "Joshua Haupt"
+    },
+    "prompt": "A simple as possible web application that only displays hello world. Authentication and a front end are not t necessary.",
+    "prompt_sha256": "adcaefc638f3e8a846eaf8b7a855c777dd63a95efc1164633b9b15230493a55e"
+  }
+}

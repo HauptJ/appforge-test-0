@@ -1,0 +1,39 @@
+schema: app-inventory/v1
+app:
+  name: hello-world-0
+  display_name: Hello World 0
+  description: Minimal FastAPI service that returns "Hello World" on a single endpoint.
+  version: 0.1.0
+  business_owner: TBD
+  technical_owner: TBD
+  lifecycle: prototype
+generated_by:
+  tool: appforge
+  model: TBD
+data:
+  classification: public
+  personal_data: false
+  categories: []
+  retention: none
+  storage: []
+interfaces:
+  inbound:
+    - "GET /api/v1/hello"
+    - "GET /healthz"
+    - "GET /readyz"
+  outbound: []
+authentication: none
+credentials:
+  vault_path: apps/hello-world-0-478e0cc6/
+  app_role: auth/approle/role/app-hello-world-0-478e0cc6
+  entries: []
+components:
+  - name: backend
+    language: python
+    framework: fastapi
+    image: localhost/hello-world-0-backend:dev
+dependencies_manifests:
+  - backend/requirements.txt
+risks:
+  - "No authentication: deliberate per the request; must be added before the app stores or exposes any non-public data."
+  - "No frontend: deliberate per the request."

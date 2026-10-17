@@ -6,4 +6,5 @@ changes. Build history is in each app's `.appforge/builds/` and in the commit tr
 
 | Application | App ID | Owner | Latest build | Updated |
 |---|---|---|---|---|
+| [Hello World 0](apps/hello-world-0-478e0cc6/) | `478e0cc6-7ea6-4a5a-9ed6-323682acb336` | Joshua Haupt (josh@hauptj.com) | #1 completed | 2026-10-17 |
 | [Hello World](apps/hello-world-b091d863/) | `b091d863-3b67-49c2-99fc-8b097b510f7b` | Joshua Haupt (josh@hauptj.com) | #1 completed | 2026-10-15 |
